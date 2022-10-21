@@ -32,12 +32,21 @@ function quadrado (){
   }
 }
 
-
+function moeda(atual){
+  return atual.toLocaleString('pt-br',{style: 'currency', currency} )
+}
 function calcula() {
   let c = document.getElementById("valor").value;
   let j = document.getElementById("juros").value;
+  if(!Number (c)){
+    alert("O valor do capital deve ser numérico.")
+    document.getElementById("valor").value = "";
+    document.getElementById("valor").focus();
+    return
+  }
+
   let r = c * (1 + (j/100));
-  document.write("Resultado: " + r);
+  document.write("Resultado: " + moeda(r));
 }
 
 
@@ -61,3 +70,4 @@ function calcule (){
   document.getElementById("resultado").innerHTML = r;
   
 }
+
