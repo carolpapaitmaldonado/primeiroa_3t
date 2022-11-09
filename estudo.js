@@ -28,13 +28,16 @@ function calcula(){
    return
   }
    let r = c;
+   let texto ="";
    for(let m = 1; m <= t; m++){
     r = c * (1 + (j/100));
     r = r;
-    document.write("Mês:"+ m + " - valor:" + moeda(r)+"<br>")
+    texto +=  m + ": " + moeda(r)+"<br>"
+   //document.write("Mês:"+ m + " - valor:" + moeda(r)+"<br>")
    }
-  
-   document.write("Resultado:" + moeda(r))
+   document.getElementById("listameses").innerHTML = texto;
+   document.getElementById("total").innerHTML = moeda(r);
+   //document.write("Resultado:" + moeda(r))
 }
 
 let op = "";
@@ -63,21 +66,3 @@ function calcule (){
   document.getElementById("resultado").innerHTML = r; 
   
 }
-
-
-
-
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
