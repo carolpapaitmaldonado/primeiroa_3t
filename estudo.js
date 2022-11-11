@@ -66,3 +66,22 @@ function calcule (){
   document.getElementById("resultado").innerHTML = r; 
   
 }
+
+function calculaESG(){
+  let a = -1;
+  let b = 5;
+  let c = -6;
+  delta = (b*b) - (4*a*c);
+  let raiz;
+  let x1, x2;
+if (delta < 0){
+  raiz = "Não tem raiz real";
+}else {
+  raiz = Math.sqrt(delta);
+  x1 = ((-b)+raiz)/(2*a);
+  x2 = ((-b)-raiz)/(2*a);
+  raiz = "x1="+x1 + " e x2="+x2;
+}
+
+  document.getElementById("raiz").value = delta;
+}
